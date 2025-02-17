@@ -47,7 +47,7 @@ describe('Test Movies Routes', () => {
                 .post('/movies')
                 .send()
                 .end((err, res) => {
-                    res.should.have.status(200);
+                    res.should.have.status(201);
                     res.body.should.have.property('message');
                     res.body.message.should.eq('movie saved')
                     done();
